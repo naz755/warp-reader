@@ -1,0 +1,17 @@
+/**
+ * TextInput Component Styles
+ * 
+ * Styles for the text input area and file indicator.
+ */
+
+/* File Indicator Animation */
+.file-indicator {
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(5px);
+}
+
+.file-indicator.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

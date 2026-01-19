@@ -1,0 +1,10 @@
+/**
+ * ControlPanel Component Styles
+ * 
+ * Styles for the WPM slider and playback control buttons.
+ */
+
+/* WPM Slider Custom Styling */
+.wpm-slider {
+    width: 100%;
+}

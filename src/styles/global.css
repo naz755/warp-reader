@@ -1,0 +1,132 @@
+/**
+ * Global Styles
+ * 
+ * Base styles, typography, and shared utilities for the Warp Reader app.
+ * Includes Tailwind imports and custom global styles.
+ */
+
+/* Import CSS variables */
+@import './variables.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Body Styles */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    -webkit-user-select: none;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+/* Allow text selection in inputs */
+textarea,
+input {
+    -webkit-user-select: text;
+    user-select: text;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Panel Base Style */
+.panel {
+    background-color: var(--panel-bg);
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Utility Button Base */
+.util-btn {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.util-btn:active {
+    transform: scale(0.97);
+}
+
+/* Progress Bar Finished State */
+.progress-finished {
+    background-color: var(--finish-glow) !important;
+    box-shadow: 0 0 12px var(--finish-glow);
+}
+
+/* Ready Button States */
+.btn-ready-default {
+    color: #ccff00 !important;
+    border-color: rgba(204, 255, 0, 0.4) !important;
+    background: rgba(204, 255, 0, 0.05);
+}
+
+.btn-ready-cyber {
+    color: #00f2ff !important;
+    border-color: rgba(0, 242, 255, 0.4) !important;
+    background: rgba(0, 242, 255, 0.05);
+}
+
+.btn-ready-mono {
+    color: #ffffff !important;
+    background: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--panel-bg);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--text-dim);
+    opacity: 0.2;
+    border-radius: 4px;
+}
+
+/* Range Input Styling */
+input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 2px solid var(--bg-dark);
+    margin-top: -9px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.4s ease;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: var(--text-dim);
+    opacity: 0.3;
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 2px solid var(--bg-dark);
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: var(--text-dim);
+    opacity: 0.3;
+}

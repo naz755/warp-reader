@@ -1,0 +1,85 @@
+/**
+ * RSVPDisplay Component Styles
+ * 
+ * Styles for the word display area with pivot highlighting and markers.
+ */
+
+/* Main Display Container */
+.rsvp-display {
+    font-family: 'Roboto Mono', monospace;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Word Container */
+.word-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    font-size: 3.5rem;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    position: relative;
+}
+
+/* Pivot Wrapper */
+.pivot-wrapper {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Pivot Markers */
+.pivot-marker {
+    position: absolute;
+    width: 3px;
+    height: 14px;
+    background-color: var(--primary);
+    opacity: var(--marker-opacity);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1px;
+    transition: background-color 0.4s ease;
+}
+
+.marker-top {
+    top: -20px;
+}
+
+.marker-bottom {
+    bottom: -20px;
+}
+
+/* Word Parts */
+.word-left {
+    flex: 1;
+    text-align: right;
+    color: var(--text-dim);
+    font-weight: 400;
+    white-space: pre;
+    transition: color 0.4s ease;
+}
+
+.word-pivot {
+    color: var(--accent);
+    font-weight: var(--pivot-weight);
+    text-shadow: var(--pivot-shadow);
+    display: inline-block;
+    text-align: center;
+    min-width: 0.6em;
+    transition: color 0.4s ease, font-weight 0.4s ease;
+}
+
+.word-right {
+    flex: 1;
+    text-align: left;
+    color: var(--text-dim);
+    font-weight: 400;
+    white-space: pre;
+    transition: color 0.4s ease;
+}

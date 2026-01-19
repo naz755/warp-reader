@@ -1,0 +1,47 @@
+/**
+ * Header Component Styles
+ * 
+ * Styles for the logo glitch effect, slogan, and version badge.
+ */
+
+/* Glitch Logo Effect */
+.glitch-logo {
+    position: relative;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.glitch-logo::before,
+.glitch-logo::after {
+    content: "warp";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch-logo::before {
+    color: var(--primary);
+    z-index: -1;
+    transform: translate(-2px, -2px);
+}
+
+.glitch-logo::after {
+    color: var(--accent);
+    z-index: -2;
+    transform: translate(2px, 2px);
+}
+
+/* Slogan Text */
+.slogan-text {
+    color: var(--slogan-color);
+    opacity: 0.6;
+}
+
+/* Version Badge */
+.version-badge {
+    border-color: var(--version-border);
+    color: var(--text-dim);
+}
