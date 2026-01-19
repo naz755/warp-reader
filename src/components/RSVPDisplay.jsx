@@ -68,7 +68,7 @@ const RSVPDisplay = ({ word, currentIndex, totalWords, isFinished }) => {
             {/* Progress Bar */}
             <div className="absolute bottom-8 w-32 h-1 bg-neutral-500/10 rounded-full overflow-hidden">
                 <div
-                    className={`h-full bg-[var(--primary)] transition-all duration-300 ${isFinished ? 'progress-finished' : ''}`}
+                    className={`h-full bg-[var(--primary)] transition-[width] duration-300 ease-out ${(isFinished || currentIndex >= totalWords - 1) ? 'progress-finished' : ''}`}
                     style={{ width: `${progressPercent}%` }}
                 ></div>
             </div>
